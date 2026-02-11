@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía Completa: Grupo GAAAA - UAC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f0f2f5; color: #1f2937; }
+        .gradient-uac { background: linear-gradient(135deg, #003366 0%, #0055aa 100%); }
+        .table-container { scrollbar-width: thin; scrollbar-color: #cbd5e1 #f8fafc; }
+        .card-shadow { box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.07); }
+        .badge-group { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3); }
+    </style>
+</head>
+<body class="py-6 px-4">
+
+    <div class="max-w-7xl mx-auto space-y-8">
+        
+        <!-- Header Principal con Nombre del Grupo -->
+        <header class="gradient-uac rounded-3xl p-8 text-white text-center shadow-xl relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 opacity-10 text-9xl">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="relative z-10">
+                <div class="inline-block badge-group px-6 py-2 rounded-full mb-4 animate-bounce">
+                    <span class="text-xl font-bold tracking-[0.2em]">GRUPO: GAAAA</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Modelado de Sistema Académico UAC</h1>
+                <div class="flex flex-wrap justify-center gap-6 text-blue-100">
+                    <p class="flex items-center"><i class="fas fa-graduation-cap mr-2"></i> EP. Ingeniería de Sistemas</p>
+                    <p class="flex items-center"><i class="fas fa-book mr-2"></i> Modelado de Base de Datos - 5</p>
+                    <p class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Cusco - 2026</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sección 1: Estructura y Docentes -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Columna: Modelo Lógico -->
+            <div class="bg-white rounded-2xl p-6 card-shadow border border-gray-100">
+                <h2 class="text-xl font-bold mb-6 flex items-center text-blue-900 border-b pb-2">
+                    <i class="fas fa-sitemap mr-3 text-blue-600"></i> Diccionario de Entidades
+                </h2>
+                <div class="space-y-4">
+                    <div class="p-3 bg-blue-50 rounded-lg">
+                        <span class="font-bold block text-sm text-blue-900">TblAlumno</span>
+                        <p class="text-[11px] text-gray-600">CodAlumno (PK), DNI, Nombres, Apellidos, Carrera, Ciclo</p>
+                    </div>
+                    <div class="p-3 bg-green-50 rounded-lg">
+                        <span class="font-bold block text-sm text-green-900">TblDocente</span>
+                        <p class="text-[11px] text-gray-600">id_docente (PK), DNI, Nombres, Apellidos, Especialidad</p>
+                    </div>
+                    <div class="p-3 bg-purple-50 rounded-lg">
+                        <span class="font-bold block text-sm text-purple-900">TblAsignatura</span>
+                        <p class="text-[11px] text-gray-600">id_asignatura (PK), Nombre, Créditos, Ciclo</p>
+                    </div>
+                    <div class="p-3 bg-red-50 rounded-lg">
+                        <span class="font-bold block text-sm text-red-900">TblNota</span>
+                        <p class="text-[11px] text-gray-600">CodNota (PK), id_alumno, id_asignatura, Parcial, Final</p>
+                    </div>
+                    <div class="p-3 bg-yellow-50 rounded-lg">
+                        <span class="font-bold block text-sm text-yellow-900">TblCarga</span>
+                        <p class="text-[11px] text-gray-600">id_carga (PK), id_docente, id_asignatura, Semestre</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna: Listado de Docentes (Todos los datos del PDF) -->
+            <div class="lg:col-span-2 bg-white rounded-2xl p-6 card-shadow border border-gray-100">
+                <h2 class="text-xl font-bold mb-6 flex items-center text-blue-900 border-b pb-2">
+                    <i class="fas fa-chalkboard-teacher mr-3 text-blue-600"></i> Personal Docente Registrado
+                </h2>
+                <div class="overflow-x-auto table-container">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="bg-gray-100 text-gray-700 uppercase text-xs tracking-wider">
+                                <th class="p-3 text-left">Cod</th>
+                                <th class="p-3 text-left">DNI</th>
+                                <th class="p-3 text-left">Apellidos y Nombres</th>
+                                <th class="p-3 text-left">Especialidad</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr><td class="p-2 font-mono text-blue-600">D001</td><td class="p-2">40111101</td><td class="p-2">Salas, Jorge</td><td class="p-2 italic">Sistemas</td></tr>
+                            <tr><td class="p-2 font-mono text-blue-600">D002</td><td class="p-2">40111102</td><td class="p-2">Vargas, Elena</td><td class="p-2 italic">Sistemas</td></tr>
+                            <tr><td class="p-2 font-mono text-blue-600">D003</td><td class="p-2">40111103</td><td class="p-2">Núñez, Ricardo</td><td class="p-2 italic">Sistemas</td></tr>
+                            <tr><td class="p-2 font-mono text-blue-600">D004</td><td class="p-2">40111104</td><td class="p-2">López, Patricia</td><td class="p-2 italic">Sistemas</td></tr>
+                            <tr><td class="p-2 font-mono text-blue-600">D005</td><td class="p-2">40111105</td><td class="p-2">Gutiérrez, Manuel</td><td class="p-2 italic">Sistemas</td></tr>
+                            <tr><td class="p-2 font-mono text-blue-600">D006</td><td class="p-2">40111106</td><td class="p-2">Flores, Silvia</td><td class="p-2 italic">Sistemas</td></tr>
+                            <tr><td class="p-2 font-mono text-blue-600">D007</td><td class="p-2">40111107</td><td class="p-2">Molina, Andrés</td><td class="p-2 italic">Sistemas</td></tr>
+                            <tr><td class="p-2 font-mono text-blue-600">D008</td><td class="p-2">40111108</td><td class="p-2">Paredes, Teresa</td><td class="p-2 italic">Sistemas</td></tr>
+                            <tr><td class="p-2 font-mono text-blue-600">D009</td><td class="p-2">40111109</td><td class="p-2">Ramos, Hugo</td><td class="p-2 italic">Sistemas</td></tr>
+                            <tr><td class="p-2 font-mono text-blue-600">D110</td><td class="p-2">40111110</td><td class="p-2">Castillo, Verónica</td><td class="p-2 italic">Sistemas</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 2: Estudiantes y Cursos -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Estudiantes -->
+            <div class="bg-white rounded-2xl p-6 card-shadow">
+                <h2 class="text-xl font-bold mb-6 text-gray-800 flex items-center">
+                    <i class="fas fa-users mr-3 text-blue-600"></i> Padrón de Estudiantes (VII Ciclo)
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                    <div class="flex justify-between p-2 border-b hover:bg-blue-50 transition-colors"><span>A001: David Oblitas</span> <span class="text-blue-600 font-bold">16.0</span></div>
+                    <div class="flex justify-between p-2 border-b hover:bg-blue-50 transition-colors"><span>A002: Juan Flores</span> <span class="text-blue-600 font-bold">15.0</span></div>
+                    <div class="flex justify-between p-2 border-b hover:bg-blue-50 transition-colors"><span>A003: Gabriel Condori</span> <span class="text-blue-600 font-bold">14.0</span></div>
+                    <div class="flex justify-between p-2 border-b hover:bg-blue-50 transition-colors"><span>A004: Dominga Perez</span> <span class="text-blue-600 font-bold">17.0</span></div>
+                    <div class="flex justify-between p-2 border-b hover:bg-blue-50 transition-colors"><span>A005: Sabadina Sanchez</span> <span class="text-blue-600 font-bold">13.0</span></div>
+                    <div class="flex justify-between p-2 border-b hover:bg-blue-50 transition-colors"><span>A006: Rosa Mamani</span> <span class="text-blue-600 font-bold">18.0</span></div>
+                    <div class="flex justify-between p-2 border-b hover:bg-blue-50 transition-colors"><span>A007: Edwin Quispe</span> <span class="text-blue-600 font-bold">15.0</span></div>
+                    <div class="flex justify-between p-2 border-b hover:bg-blue-50 transition-colors"><span>A008: Gael Prado</span> <span class="text-blue-600 font-bold">14.0</span></div>
+                    <div class="flex justify-between p-2 border-b hover:bg-blue-50 transition-colors"><span>A009: Gabi Mogrobejo</span> <span class="text-blue-600 font-bold">13.0</span></div>
+                    <div class="flex justify-between p-2 border-b hover:bg-blue-50 transition-colors"><span>A010: Gael Andia</span> <span class="text-blue-600 font-bold">17.0</span></div>
+                </div>
+            </div>
+
+            <!-- Asignaturas -->
+            <div class="bg-white rounded-2xl p-6 card-shadow">
+                <h2 class="text-xl font-bold mb-6 text-gray-800 flex items-center">
+                    <i class="fas fa-book-open mr-3 text-blue-600"></i> Catálogo de Asignaturas (UAC-Sistemas)
+                </h2>
+                <div class="space-y-2 max-h-[400px] overflow-y-auto pr-2 custom-scroll">
+                    <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+                        <span class="font-medium text-gray-700">Base de Datos</span>
+                        <div class="text-right"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-[10px] font-bold">4 CRÉD.</span> <span class="text-gray-500 text-xs ml-2">VI</span></div>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+                        <span class="font-medium text-gray-700">Matemática Básica</span>
+                        <div class="text-right"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-[10px] font-bold">3 CRÉD.</span> <span class="text-gray-500 text-xs ml-2">I</span></div>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+                        <span class="font-medium text-gray-700">Contabilidad General</span>
+                        <div class="text-right"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-[10px] font-bold">4 CRÉD.</span> <span class="text-gray-500 text-xs ml-2">IV</span></div>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+                        <span class="font-medium text-gray-700">Derecho Civil</span>
+                        <div class="text-right"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-[10px] font-bold">4 CRÉD.</span> <span class="text-gray-500 text-xs ml-2">VII</span></div>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+                        <span class="font-medium text-gray-700">Administración General</span>
+                        <div class="text-right"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-[10px] font-bold">3 CRÉD.</span> <span class="text-gray-500 text-xs ml-2">II</span></div>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+                        <span class="font-medium text-gray-700">Diseño Arquitectónico</span>
+                        <div class="text-right"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-[10px] font-bold">3 CRÉD.</span> <span class="text-gray-500 text-xs ml-2">III</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3: Infraestructura y Docencia (Semestre 2024-1) -->
+        <div class="bg-gray-800 rounded-3xl p-8 text-white shadow-inner">
+            <h2 class="text-2xl font-bold mb-8 text-center flex justify-center items-center">
+                <i class="fas fa-calendar-check mr-4 text-yellow-400 animate-pulse"></i> Planificación Académica Semestre 2024-I
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pabellón A-1 -->
+                <div class="border border-gray-700 p-4 rounded-xl bg-gray-900/50 hover:border-yellow-400 transition-colors">
+                    <h4 class="text-yellow-400 font-bold mb-2">Pabellón A (Piso 1)</h4>
+                    <p class="text-[10px] opacity-70 mb-4 tracking-widest uppercase">Infraestructura Crítica</p>
+                    <div class="flex gap-2 flex-wrap text-[10px]">
+                        <span class="border border-gray-600 px-2 py-1 rounded">S001 (30)</span>
+                        <span class="border border-green-600 px-2 py-1 rounded font-bold bg-green-900/40">S007 (50)</span>
+                        <span class="border border-gray-600 px-2 py-1 rounded">S009 (40)</span>
+                    </div>
+                </div>
+                <!-- Pabellón A-2 -->
+                <div class="border border-gray-700 p-4 rounded-xl bg-gray-900/50 hover:border-yellow-400 transition-colors">
+                    <h4 class="text-yellow-400 font-bold mb-2">Pabellón A (Piso 2)</h4>
+                    <p class="text-[10px] opacity-70 mb-4 tracking-widest uppercase">Infraestructura Crítica</p>
+                    <div class="flex gap-2 flex-wrap text-[10px]">
+                        <span class="border border-gray-600 px-2 py-1 rounded">S002 (35)</span>
+                        <span class="border border-blue-600 px-2 py-1 rounded font-bold bg-blue-900/40">S004 (45)</span>
+                        <span class="border border-gray-600 px-2 py-1 rounded">S008 (45)</span>
+                    </div>
+                </div>
+                <!-- Estadísticas -->
+                <div class="border border-gray-700 p-4 rounded-xl bg-gray-900/50 flex flex-col items-center justify-center group">
+                    <span class="text-4xl font-black group-hover:text-yellow-400 transition-colors">100%</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gray-400 text-center">Carga Docente Ejecutada</span>
+                </div>
+                <!-- Promedio -->
+                <div class="border border-gray-700 p-4 rounded-xl bg-gray-900/50 flex flex-col items-center justify-center group">
+                    <span class="text-4xl font-black group-hover:text-yellow-400 transition-colors">15.0</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gray-400 text-center">Promedio General Ponderado</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Créditos y Profesionales -->
+        <footer class="bg-white rounded-2xl p-8 card-shadow border border-gray-100">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 gradient-uac rounded-2xl flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-university text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-blue-900">Mg. Ing. Hugo Espetia Huamanga</h3>
+                        <p class="text-gray-500 text-sm">Catedrático de la Escuela Profesional de Ingeniería de Sistemas</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-end">
+                    <div class="text-right">
+                        <div class="bg-blue-900 text-white px-4 py-1 rounded-full text-xs font-bold mb-3 inline-block">
+                            GRUPO GAAAA
+                        </div>
+                        <div class="grid grid-cols-1 gap-1 text-[13px] font-semibold text-gray-700">
+                            <span><i class="fas fa-user-circle mr-2 text-blue-600"></i>Chuquitapa Flores Kefren Darly</span>
+                            <span><i class="fas fa-user-circle mr-2 text-blue-600"></i>Achahui Zans Sebastian Cristobal</span>
+                            <span><i class="fas fa-user-circle mr-2 text-blue-600"></i>Portugal Castillo Olger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-4 border-t border-gray-100 text-center text-[10px] text-gray-400 tracking-[0.3em] uppercase">
+                &copy; 2026 Universidad Andina del Cusco - Facultad de Ingeniería y Arquitectura
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
